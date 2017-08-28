@@ -10,11 +10,10 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 
 public class WeekTransform implements Trans {
-    private static ArrayList<Week> list=new ArrayList<>();
 
     @Override
     public <T> ArrayList<T> trans(ArrayList<String> week_list) {
-        ArrayList<String> col_list= Collect.collect(week_list,new WeekPattern());
-        return null;
+        ArrayList<T> list=Collect.collect(week_list,new WeekPattern());
+        return list;
     }
 }

@@ -20,7 +20,7 @@ public class AppliMain {
             String result=post.post();
             week_list.add(result);
         }
-        ArrayList<Week> week_trans_list= WeekTransform.trans(week_list);
+        //ArrayList<Week> week_trans_list= WeekTransform.trans(week_list);
         System.out.print(week_list.get(0));
     }
 }
