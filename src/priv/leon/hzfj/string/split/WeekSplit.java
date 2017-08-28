@@ -13,8 +13,14 @@ public class WeekSplit implements Split{
         Week week=(Week)t;
         ArrayList<Week> list1=new ArrayList<>();
         for(int i=0;i<list.size();i++){
-            int start=list.get(i).indexOf("<span class=\"ash1 flotright\">");
-            int end=list.get(i).indexOf("<span class=\"ash1 flotright\">");
+            int date_start=list.get(i).indexOf("flotright\">");
+            int url_start=list.get(i).indexOf("<a href=\"");
+            int title_start=list.get(i).indexOf("title=\"");
+
+            int date_end=list.get(i).indexOf("</span>");
+            int url_end=list.get(i).indexOf("title=");
+            int title_end=list.get(i).indexOf("\" target=");
+
 
         }
         return null;
