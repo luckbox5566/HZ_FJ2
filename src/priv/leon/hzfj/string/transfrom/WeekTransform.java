@@ -1,7 +1,8 @@
-package priv.leon.hzfj.net.transform;
+package priv.leon.hzfj.string.transfrom;
 
-import priv.leon.hzfj.net.bean.Week;
-import priv.leon.hzfj.net.pattern.WeekPattern;
+
+import priv.leon.hzfj.app.bean.Week;
+import priv.leon.hzfj.string.pattern.WeekPattern;
 
 import java.util.ArrayList;
 import java.util.regex.Matcher;

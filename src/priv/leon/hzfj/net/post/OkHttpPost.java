@@ -1,6 +1,7 @@
 package priv.leon.hzfj.net.post;
 
 import okhttp3.*;
+import priv.leon.hzfj.net.OkHttpSingle;
 
 import java.io.IOException;
 

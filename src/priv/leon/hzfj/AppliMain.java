@@ -1,8 +1,9 @@
-package priv.leon.hzfj.net;
+package priv.leon.hzfj;
 
-import priv.leon.hzfj.net.bean.Week;
+
+import priv.leon.hzfj.app.bean.Week;
 import priv.leon.hzfj.net.post.OkHttpPost;
-import priv.leon.hzfj.net.transform.WeekTransform;
+import priv.leon.hzfj.string.transfrom.WeekTransform;
 import priv.leon.hzfj.net.urls.WeekUrls;
 
 import java.util.ArrayList;

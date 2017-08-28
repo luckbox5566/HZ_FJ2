@@ -1,4 +1,4 @@
-package priv.leon.hzfj.net.bean;
+package priv.leon.hzfj.app.bean;
 
 public class Week {
     private String date;
