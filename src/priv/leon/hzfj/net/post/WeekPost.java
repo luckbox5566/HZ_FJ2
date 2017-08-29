@@ -33,7 +33,6 @@ public class WeekPost implements Post{
                 .addHeader("Cache-Control:",TmsfParasApp.Cache_Control)
                 .addHeader("Content-Length",TmsfParasApp.Content_Length)
                 .addHeader("Content-Type",TmsfParasApp.Content_Type)
-                .addHeader("Cookie",TmsfParasApp.Cookie)
                 .addHeader("Host",TmsfParasApp.Host)
                 .addHeader("Proxy-Connection",TmsfParasApp.Proxy_Connection)
                 .addHeader("Upgrade-Insecure-Requests",TmsfParasApp.Upgrade_Insecure_Requests)
