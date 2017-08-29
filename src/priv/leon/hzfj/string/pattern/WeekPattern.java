@@ -21,7 +21,7 @@ public class WeekPattern implements priv.leon.hzfj.string.interfaces.Pattern {
         Elements elements=new Elements();
         //过滤掉不需要的li
         for(Element element:content){
-            if(element.className().equals("ash1 flotright")){
+            if(element.select("span").attr("class").equals("ash1 flotright")){
                   elements.add(element);
             }
         }

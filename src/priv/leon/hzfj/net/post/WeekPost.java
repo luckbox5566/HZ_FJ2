@@ -2,22 +2,24 @@ package priv.leon.hzfj.net.post;
 
 import okhttp3.*;
 import priv.leon.hzfj.net.OkHttpSingle;
+import priv.leon.hzfj.net.interfaces.Post;
+import priv.leon.hzfj.net.post.body.WeekPostBody;
 
 import java.io.IOException;
 
-public class OkHttpPost {
+public class WeekPost implements Post{
     private String url="";
     private String page="";
-    private WeekRequestBody weekRequestBody;
+    private WeekPostBody weekPostBody;
     private RequestBody body;
 
     private OkHttpClient okHttpClient;
 
-    public OkHttpPost(String url, String page) {
+    public WeekPost(String url, String page) {
         this.url = url;
         this.page = page;
-        weekRequestBody=new WeekRequestBody(page);
-        body=weekRequestBody.getBody();
+        weekPostBody =new WeekPostBody(page);
+        body= weekPostBody.getBody();
         okHttpClient= OkHttpSingle.getInstance().getOkHttpClient();
     }
 

@@ -5,12 +5,13 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import priv.leon.hzfj.net.OkHttpSingle;
+import priv.leon.hzfj.net.interfaces.Get;
 
 import java.io.IOException;
 /*
 通过url进行网络请求，返回结果
  */
-public class OkHttpGet {
+public class OkHttpGet implements Get{
 
    private String url="";
 

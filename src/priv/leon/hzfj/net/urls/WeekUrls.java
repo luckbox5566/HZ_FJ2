@@ -5,13 +5,13 @@ import java.util.ArrayList;
 public class WeekUrls {
     private static final int START=1;
     private static final int END=44;
-    private static int[] pages=new int[END];
+    private static String[] pages=new String[END];
 
 
-    public static int[] pages(){
+    public static String[] pages(){
 
         for(int i=0;i<END;i++){
-          pages[i]=i+1;
+          pages[i]= String.valueOf(i+1);
         }
 
         return pages;

@@ -1,13 +1,13 @@
-package priv.leon.hzfj.net.post;
+package priv.leon.hzfj.net.post.body;
 
 import okhttp3.FormBody;
 import okhttp3.RequestBody;
 
-public class WeekRequestBody {
+public class WeekPostBody {
     private RequestBody body;
 
 
-    public WeekRequestBody(String page) {
+    public WeekPostBody(String page) {
         body = new FormBody.Builder()
                 .add("page", page)
                 .add("keywords","")
