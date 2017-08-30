@@ -3,10 +3,12 @@ package priv.leon.hzfj.mysql.jdbc;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class JdbcSingleCilent {
     private Connection conn=null;
     private static JdbcSingleCilent cilent=null;
+    private Statement statement=null;
 
     private static final String URL="jdbc:mysql://localhost:3306/MySQL57";
     private static final String USER="root";
@@ -17,6 +19,7 @@ public class JdbcSingleCilent {
             // 1、注册驱动
             Class.forName("com.mysql.jdbc.Driver");
             conn= DriverManager.getConnection(URL, USER, PASS);
+            statement=conn.createStatement();
         } catch (SQLException e) {
             e.printStackTrace();
             conn=null;
@@ -33,7 +36,11 @@ public class JdbcSingleCilent {
         return cilent;
     }
 
-    public Connection getConn() {
+    private Connection getConn() {
         return conn;
+    }
+
+    public Statement getStatement() {
+        return statement;
     }
 }

@@ -10,5 +10,15 @@
     <orderEntry type="library" exported="" name="com.squareup.okhttp3:okhttp:3.8.1" level="project" />
     <orderEntry type="library" exported="" name="org.jsoup:jsoup:1.10.3" level="project" />
     <orderEntry type="library" exported="" name="mysql:mysql-connector-java:6.0.6" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$USER_HOME$/Desktop/hibernate-release-5.2.10.Final/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$USER_HOME$/Desktop/hibernate-release-5.2.10.Final/lib" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>
