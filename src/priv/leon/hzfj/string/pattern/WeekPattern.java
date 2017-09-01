@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class WeekPattern implements priv.leon.hzfj.string.interfaces.Pattern {
 
     @Override
-    public <T> ArrayList<Week> matcher(String result) {
+    public <T> ArrayList<T> matcher(String result) {
         ArrayList<Week> list=new ArrayList<>();
         Document doc = Jsoup.parse(result);
         Elements content = doc.getElementsByTag("li");
@@ -45,6 +45,6 @@ public class WeekPattern implements priv.leon.hzfj.string.interfaces.Pattern {
 
 
 
-        return list;
+        return (ArrayList<T>) list;
     }
 }

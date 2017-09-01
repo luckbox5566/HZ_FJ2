@@ -8,6 +8,6 @@ public class NewHouseSignType {
     //表
 
     private String type;
-    private String sign_house_suits;
-    private String sign_sell_area;
+    private Integer sign_house_suits;
+    private Integer sign_sell_area;
 }
