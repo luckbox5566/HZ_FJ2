@@ -3,6 +3,8 @@ package priv.leon.hzfj;
 
 import priv.leon.hzfj.app.bean.Week;
 import priv.leon.hzfj.app.net.TmsfParasApp;
+import priv.leon.hzfj.hibernate.factotry.HibernateDo;
+import priv.leon.hzfj.hibernate.session.insert.WeekSession;
 import priv.leon.hzfj.net.builder.NetDirector;
 import priv.leon.hzfj.net.builder.WeekPostBuilder;
 import priv.leon.hzfj.net.cookies.WeekCookies;
@@ -30,5 +32,8 @@ public class AppliMain {
         ArrayList<Week> week_b_list=new ArrayList<>();
         week_b_list=trans.trans(week_s_list);
         System.out.print(week_s_list.get(0));
+        //插入数据
+        HibernateDo hibernate=new HibernateDo(new WeekSession(week_b_list),"insert");
+        hibernate.commit();
     }
 }
