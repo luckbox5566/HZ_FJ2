@@ -1,7 +1,7 @@
 package priv.leon.hzfj.string.factory;
 
 import priv.leon.hzfj.string.interfaces.Trans;
-import priv.leon.hzfj.string.transfrom.WeekTransform;
+import priv.leon.hzfj.string.transfrom.*;
 
 public class TransFactory {
     public static Trans get(String name){
@@ -12,6 +12,16 @@ public class TransFactory {
                 return new WeekTransform();
             case "月报":
                 break;
+            case "新房签约信息表":
+                return new NewHouseSignTransform();
+            case "新房可售信息表":
+                return new NewHouseCallSellTransform();
+            case "新房分类型信息表":
+                return new NewHousesSignTypeTransform();
+            case "新房分区交易信息表":
+                return new NewHouseZonesTransform();
+            case "新房楼盘销售排行表":
+                return new NewHouseRankingTransform();
 
         }
         return null;
