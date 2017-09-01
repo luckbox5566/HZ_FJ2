@@ -32,6 +32,7 @@ public class Client {
             week.setUrl("url");
             week.setTitle("title");
             session.save(week);
+
             transaction.commit();//提交事务
         }catch (Exception e){
             e.printStackTrace();
