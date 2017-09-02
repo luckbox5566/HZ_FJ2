@@ -1,7 +1,7 @@
 package priv.leon.hzfj.hibernate.factotry;
 
 import priv.leon.hzfj.hibernate.interfaces.Session;
-import priv.leon.hzfj.hibernate.session.insert.WeekSession;
+import priv.leon.hzfj.hibernate.session.insert.*;
 
 public class HibernateDo {
     private Session session=null;
@@ -18,6 +18,22 @@ public class HibernateDo {
                 WeekSession weekSession=(WeekSession)session;
                 weekSession.insert();
                 break;
+            case "insert_can_sell":
+                NewHouseCanSellSession sellSession= (NewHouseCanSellSession) session;
+                break;
+            case "insert_ranking":
+                NewHouseRankingSession newHouseRankingSession= (NewHouseRankingSession) session;
+                break;
+            case "insert_sign":
+                NewHouseSignSession newHouseSignSession= (NewHouseSignSession) session;
+                break;
+            case "insert_sign_type":
+                NewHouseSignTypeSession newHouseSignTypeSession= (NewHouseSignTypeSession) session;
+                break;
+            case "insert_zones":
+                NewHouseZonesSession newHouseZonesSession= (NewHouseZonesSession) session;
+                break;
+
         }
     }
 }

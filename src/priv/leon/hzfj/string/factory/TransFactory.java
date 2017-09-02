@@ -12,15 +12,20 @@ public class TransFactory {
                 return new WeekTransform();
             case "月报":
                 break;
-            case "新房签约信息表":
+            case "sign":
+                //新房签约信息表
                 return new NewHouseSignTransform();
-            case "新房可售信息表":
+            case "can_sell":
+                //新房可售信息表
                 return new NewHouseCallSellTransform();
-            case "新房分类型信息表":
+            case "sign_type":
+                //新房分类型信息表
                 return new NewHousesSignTypeTransform();
-            case "新房分区交易信息表":
+            case "zones":
+                //新房分区交易信息表
                 return new NewHouseZonesTransform();
-            case "新房楼盘销售排行表":
+            case "ranking":
+                //新房楼盘销售排行表
                 return new NewHouseRankingTransform();
 
         }

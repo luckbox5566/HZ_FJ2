@@ -32,6 +32,8 @@ public class NewHouseGetBuilder extends NetBuilder {
             String result=htmlCollect.collect();
             if(result!=null){
                 result_list.add(result);
+                int num=i+1;
+                System.out.println("第"+num+"个网站请求成功");
             }
 
         }

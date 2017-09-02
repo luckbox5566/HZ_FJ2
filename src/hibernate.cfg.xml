@@ -30,6 +30,13 @@
         <property name="jdbc.batch_size">23 </property>
 
         <mapping class="priv.leon.hzfj.app.bean.Week"/>
+        <mapping class="priv.leon.hzfj.app.bean.NewHouseZones"/>
+        <mapping class="priv.leon.hzfj.app.bean.NewHouseSignType"/>
+        <mapping class="priv.leon.hzfj.app.bean.NewHouseSign"/>
+        <mapping class="priv.leon.hzfj.app.bean.NewHouseZones"/>
+        <mapping class="priv.leon.hzfj.app.bean.NewHouseRanking"/>
+        <mapping class="priv.leon.hzfj.app.bean.NewHouseCanSell"/>
+
 
     </session-factory>
 
