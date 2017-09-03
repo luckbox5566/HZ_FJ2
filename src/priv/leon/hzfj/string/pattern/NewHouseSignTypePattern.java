@@ -50,7 +50,7 @@ public class NewHouseSignTypePattern implements Pattern{
                 new_house_sign_type_list.add(newHouseSignType);
             }
         }catch (Exception e){
-
+            System.out.println(e.toString());
         }
 
 

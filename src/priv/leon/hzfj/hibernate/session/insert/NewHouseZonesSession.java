@@ -3,6 +3,7 @@ package priv.leon.hzfj.hibernate.session.insert;
 import org.hibernate.Transaction;
 import priv.leon.hzfj.app.bean.NewHouseSignType;
 import priv.leon.hzfj.app.bean.NewHouseZones;
+import priv.leon.hzfj.hibernate.HibernateSingle;
 import priv.leon.hzfj.hibernate.interfaces.Insert;
 import priv.leon.hzfj.hibernate.interfaces.Session;
 
@@ -13,6 +14,7 @@ public class NewHouseZonesSession extends Session implements Insert {
 
     public NewHouseZonesSession(ArrayList<NewHouseZones> zones_list) {
         this.zones_list = zones_list;
+        session= HibernateSingle.single().getSessionFactory().openSession();
     }
 
     @Override

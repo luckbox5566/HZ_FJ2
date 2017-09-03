@@ -3,6 +3,7 @@ package priv.leon.hzfj.hibernate.session.insert;
 import org.hibernate.Transaction;
 import priv.leon.hzfj.app.bean.NewHouseCanSell;
 import priv.leon.hzfj.app.bean.Week;
+import priv.leon.hzfj.hibernate.HibernateSingle;
 import priv.leon.hzfj.hibernate.interfaces.Insert;
 import priv.leon.hzfj.hibernate.interfaces.Session;
 
@@ -13,6 +14,7 @@ public class NewHouseCanSellSession extends Session implements Insert {
 
     public NewHouseCanSellSession(ArrayList<NewHouseCanSell> can_sell_list) {
         this.can_sell_list = can_sell_list;
+        session= HibernateSingle.single().getSessionFactory().openSession();
     }
 
     @Override

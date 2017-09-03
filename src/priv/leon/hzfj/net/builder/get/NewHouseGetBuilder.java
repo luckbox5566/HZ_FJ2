@@ -7,11 +7,15 @@ import priv.leon.hzfj.net.tool.HtmlCollect;
 import priv.leon.hzfj.net.urls.NewHouseUrls;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class NewHouseGetBuilder extends NetBuilder {
     private String[] pages=null;
     private ArrayList<String> result=new ArrayList<>();
     private ArrayList<String> urls=new ArrayList<>();
+
+    private int min=0;
+    private int max=2;
 
     @Override
     public void setParas(String[] list) {
@@ -33,7 +37,16 @@ public class NewHouseGetBuilder extends NetBuilder {
             if(result!=null){
                 result_list.add(result);
                 int num=i+1;
-                System.out.println("第"+num+"个网站请求成功");
+                float precent=(num/urls.size())*100;
+                System.out.println("第"+num+"个网站请求成功,完成"+precent+"%");
+            }
+            //随记暂停几秒在运行
+            Random random=new Random();//创建random对象
+            double doubleNumber=random.nextDouble();//获取双精度数(0-1)
+            try {
+                Thread.sleep((long) (doubleNumber*100));
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
 
         }

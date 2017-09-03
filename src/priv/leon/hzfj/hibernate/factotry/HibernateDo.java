@@ -20,18 +20,23 @@ public class HibernateDo {
                 break;
             case "insert_can_sell":
                 NewHouseCanSellSession sellSession= (NewHouseCanSellSession) session;
+                sellSession.insert();
                 break;
             case "insert_ranking":
                 NewHouseRankingSession newHouseRankingSession= (NewHouseRankingSession) session;
+                newHouseRankingSession.insert();
                 break;
             case "insert_sign":
                 NewHouseSignSession newHouseSignSession= (NewHouseSignSession) session;
+                newHouseSignSession.insert();
                 break;
             case "insert_sign_type":
                 NewHouseSignTypeSession newHouseSignTypeSession= (NewHouseSignTypeSession) session;
+                newHouseSignTypeSession.insert();
                 break;
             case "insert_zones":
                 NewHouseZonesSession newHouseZonesSession= (NewHouseZonesSession) session;
+                newHouseZonesSession.insert();
                 break;
 
         }

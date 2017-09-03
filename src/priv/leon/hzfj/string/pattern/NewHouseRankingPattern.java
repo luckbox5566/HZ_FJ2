@@ -51,7 +51,7 @@ public class NewHouseRankingPattern implements Pattern {
                 new_house_zones_type_list.add(newHouseZones);
             }
         }catch (Exception e){
-
+            System.out.println(e.toString());
         }
 
 
