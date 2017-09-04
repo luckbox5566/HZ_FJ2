@@ -50,7 +50,7 @@ public class NewHouseCallSellPattern implements Pattern {
             }
         }catch (Exception e){
 
-            System.out.println(e.toString());
+            System.out.println("当前类为："+this.getClass().toString()+e.toString());
         }
 
         return (ArrayList<T>) new_house_can_sell_list;

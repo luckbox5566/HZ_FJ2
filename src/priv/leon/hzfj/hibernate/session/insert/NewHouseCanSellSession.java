@@ -14,12 +14,13 @@ public class NewHouseCanSellSession extends Session implements Insert {
 
     public NewHouseCanSellSession(ArrayList<NewHouseCanSell> can_sell_list) {
         this.can_sell_list = can_sell_list;
-        session= HibernateSingle.single().getSessionFactory().openSession();
+
     }
 
     @Override
     public void insert() {
         try{
+            session= HibernateSingle.single().getSessionFactory().openSession();
             Transaction transaction = session.beginTransaction();//开启一个新的事务
             for(NewHouseCanSell week:can_sell_list){
                 session.save(week);

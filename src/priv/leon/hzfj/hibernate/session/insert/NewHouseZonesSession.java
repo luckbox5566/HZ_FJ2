@@ -14,12 +14,13 @@ public class NewHouseZonesSession extends Session implements Insert {
 
     public NewHouseZonesSession(ArrayList<NewHouseZones> zones_list) {
         this.zones_list = zones_list;
-        session= HibernateSingle.single().getSessionFactory().openSession();
+
     }
 
     @Override
     public void insert() {
         try{
+            session= HibernateSingle.single().getSessionFactory().openSession();
             Transaction transaction = session.beginTransaction();//开启一个新的事务
             for(NewHouseZones week:zones_list){
                 session.save(week);

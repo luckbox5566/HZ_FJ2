@@ -14,12 +14,13 @@ public class NewHouseSignSession extends Session implements Insert {
 
     public NewHouseSignSession(ArrayList<NewHouseSign> sign_list) {
         this.sign_list = sign_list;
-        session= HibernateSingle.single().getSessionFactory().openSession();
+
     }
 
     @Override
     public void insert() {
         try{
+            session= HibernateSingle.single().getSessionFactory().openSession();
             Transaction transaction = session.beginTransaction();//开启一个新的事务
             for(NewHouseSign week:sign_list){
                 session.save(week);

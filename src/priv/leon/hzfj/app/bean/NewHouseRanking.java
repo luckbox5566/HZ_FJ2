@@ -15,15 +15,11 @@ public class NewHouseRanking {
     //主键 日期
     private String date;
     //表
-    private Integer num;
+    private String num;
     private String build_name;
     private String area;
     private String saled_volume;
     private String saled_square;
-
-    public String getDate() {
-        return date;
-    }
 
     public Integer getNo() {
         return no;
@@ -33,15 +29,19 @@ public class NewHouseRanking {
         this.no = no;
     }
 
+    public String getDate() {
+        return date;
+    }
+
     public void setDate(String date) {
         this.date = date;
     }
 
-    public Integer getNum() {
+    public String getNum() {
         return num;
     }
 
-    public void setNum(Integer num) {
+    public void setNum(String num) {
         this.num = num;
     }
 

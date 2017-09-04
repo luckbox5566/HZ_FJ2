@@ -43,7 +43,7 @@ public class NewHouseRankingPattern implements Pattern {
                 NewHouseRanking newHouseZones=new NewHouseRanking();
 
                 newHouseZones.setDate(date);
-                newHouseZones.setNum(Integer.valueOf(elements.get(0).text()));
+                newHouseZones.setNum(elements.get(0).text());
                 newHouseZones.setBuild_name(elements.get(1).text());
                 newHouseZones.setArea(elements.get(2).text());
                 newHouseZones.setSaled_volume(elements.get(3).text());
@@ -51,7 +51,7 @@ public class NewHouseRankingPattern implements Pattern {
                 new_house_zones_type_list.add(newHouseZones);
             }
         }catch (Exception e){
-            System.out.println(e.toString());
+            System.out.println("当前类为："+this.getClass().toString()+e.toString());
         }
 
 

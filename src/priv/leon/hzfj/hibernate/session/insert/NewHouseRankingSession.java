@@ -14,12 +14,13 @@ public class NewHouseRankingSession extends Session implements Insert {
 
     public NewHouseRankingSession(ArrayList<NewHouseRanking> ranking_list) {
         this.ranking_list = ranking_list;
-        session= HibernateSingle.single().getSessionFactory().openSession();
+
     }
 
     @Override
     public void insert() {
         try{
+            session= HibernateSingle.single().getSessionFactory().openSession();
             Transaction transaction = session.beginTransaction();//开启一个新的事务
             for(NewHouseRanking week:ranking_list){
                 session.save(week);

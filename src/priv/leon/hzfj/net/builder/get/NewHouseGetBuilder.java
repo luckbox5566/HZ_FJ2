@@ -37,7 +37,7 @@ public class NewHouseGetBuilder extends NetBuilder {
             if(result!=null){
                 result_list.add(result);
                 int num=i+1;
-                float precent=(num/urls.size())*100;
+                double precent=((double) ((double)num/(double)urls.size()))*100;
                 System.out.println("第"+num+"个网站请求成功,完成"+precent+"%");
             }
             //随记暂停几秒在运行

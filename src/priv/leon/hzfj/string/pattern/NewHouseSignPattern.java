@@ -70,7 +70,7 @@ public class NewHouseSignPattern implements Pattern {
             newHouseSign.setDjd_average_price(djd_average_price);
             house_sign_list.add(newHouseSign);
         }catch (Exception e){
-            System.out.println(e.toString());
+            System.out.println("当前类为："+this.getClass().toString()+e.toString());
         }
 
         return (ArrayList<T>) house_sign_list;

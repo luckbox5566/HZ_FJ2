@@ -52,7 +52,7 @@ public class NewHouseZonesPattern implements Pattern {
                 new_house_zones_type_list.add(newHouseZones);
             }
         }catch (Exception e){
-            System.out.println(e.toString());
+            System.out.println("当前类为："+this.getClass().toString()+e.toString());
         }
 
 
