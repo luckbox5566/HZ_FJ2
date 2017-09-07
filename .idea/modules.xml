@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/HTTP_SERVER/HTTP_SERVER.iml" filepath="$PROJECT_DIR$/HTTP_SERVER/HTTP_SERVER.iml" />
       <module fileurl="file://$PROJECT_DIR$/HZ_FJ2.iml" filepath="$PROJECT_DIR$/HZ_FJ2.iml" />
     </modules>
   </component>
