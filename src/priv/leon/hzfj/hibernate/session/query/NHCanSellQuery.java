@@ -1,30 +1,26 @@
-package priv.leon.hzfj.hibernate.session.insert;
+package priv.leon.hzfj.hibernate.session.query;
 
 import org.hibernate.Transaction;
 import priv.leon.hzfj.app.bean.NewHouseCanSell;
-import priv.leon.hzfj.app.bean.NewHouseRanking;
 import priv.leon.hzfj.hibernate.HibernateSingle;
-import priv.leon.hzfj.hibernate.interfaces.Insert;
+import priv.leon.hzfj.hibernate.interfaces.Query;
 import priv.leon.hzfj.hibernate.interfaces.Session;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class NewHouseRankingSession extends Session implements Insert {
-    private ArrayList<NewHouseRanking> ranking_list=new ArrayList<>();
-
-    public NewHouseRankingSession(ArrayList<NewHouseRanking> ranking_list) {
-        this.ranking_list = ranking_list;
-    }
-
+public class NHCanSellQuery extends Session implements Query{
+    ArrayList<NewHouseCanSell> new_house_can_sell=new ArrayList<>();
     @Override
-    public void insert() {
+    public <T> List<T> query() {
         try{
             session= HibernateSingle.single().getSessionFactory().openSession();
-            Transaction transaction = session.beginTransaction();//开启一个新的事务
-            for(NewHouseRanking week:ranking_list){
-                session.save(week);
+            org.hibernate.query.Query query=session.createQuery("from nh_can_sell");
+            List list=query.list();
+            for(int i=0;i<list.size();i++){
+                new_house_can_sell.add((NewHouseCanSell) list.get(i));
             }
-            transaction.commit();//提交事务
+
         } catch (Exception e){
             e.printStackTrace();
             //回滚事务
@@ -37,5 +33,6 @@ public class NewHouseRankingSession extends Session implements Insert {
                 }
             }
         }
+        return (List<T>) new_house_can_sell;
     }
 }
